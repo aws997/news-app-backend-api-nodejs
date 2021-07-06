@@ -82,4 +82,15 @@ router.get("/home/all", async (req, res) => {
   
   res.status(200).json(posts);
 });
+
+
+
+router.get("/test", async (req, res) => {
+
+
+ const pr=new Post();
+  const posts = await Post.countDocuments({ userId: 'parameter' });
+  console.log(posts)
+  res.status(200).json(posts);
+});
 module.exports = router;
