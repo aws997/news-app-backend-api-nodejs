@@ -27,6 +27,7 @@ mongoose.connect(process.env.MONGO_URI,
   app.use("/api/auth",authRoute);
   app.use("/api/posts",postsRoute);
 
-    app.listen(3000,()=>{
+  const PORT=process.env.PORT || 3000
+    app.listen(PORT,()=>{
         console.log("running ")
     })
